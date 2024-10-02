@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #161616;
+  overflow-x: hidden;
+}
+.bg-header {
+  background-color: #333333;
+}
