@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,8 +8,8 @@ function Navbar() {
   };
 
   return (
-    <header className="sticky top-3 bg-header w-[90%] md:w-[80%] h-16 m-auto rounded-3xl flex justify-center backdrop-blur-sm	z-999">
-      <div className="w-full flex justify-between items-center text-white p-5">
+    <header className="sticky z-[9999] top-3 bg-header w-[90%] md:w-[80%] h-16 m-auto rounded-3xl flex justify-center backdrop-blur-sm">
+      <div className="w-full flex justify-between items-center text-white p-5 relative z-[9999]">
         <h1 className="text-white font-bold text-2xl">Halim Choukani</h1>
 
         {/* Desktop Navigation */}
@@ -58,7 +58,7 @@ function Navbar() {
           <img
             src="/assets/images/menu.svg"
             alt="menu"
-            className="w-10 cursor-pointer z-1000"
+            className="w-10 cursor-pointer relative z-[1000]"
             onClick={toggleMenu}
           />
         </div>
@@ -66,7 +66,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-20 left-[50%] translate-x-[-50%] w-[90%] h-full bg-[#333333] text-white p-5 z-50 md:hidden md:h-1 rounded-3xl transition-all">
+        <div className="absolute top-20 left-[50%] translate-x-[-50%] w-[90%] h-full bg-[#333333] text-white p-5 z-[9999] md:hidden md:h-1 rounded-3xl transition-all">
           <nav className="flex flex-col items-center justify-between h-full">
             <ul className="flex flex-col items-center justify-center gap-20 w-full p-5">
               <li>
