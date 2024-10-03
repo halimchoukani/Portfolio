@@ -8,7 +8,7 @@ function Navbar() {
   };
 
   return (
-    <header className="bg-header w-[90%] md:w-[80%] h-16 m-auto rounded-3xl flex justify-center">
+    <header className="sticky top-3 bg-header w-[90%] md:w-[80%] h-16 m-auto rounded-3xl flex justify-center backdrop-blur-sm	z-999">
       <div className="w-full flex justify-between items-center text-white p-5">
         <h1 className="text-white font-bold text-2xl">Halim Choukani</h1>
 
