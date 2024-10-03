@@ -38,7 +38,7 @@ function App() {
         markers: false,
       },
       opacity: 1,
-      y: "-400px",
+      top: "-400px",
       duration: 1,
       stagger: 0.3,
     });
@@ -52,21 +52,22 @@ function App() {
         markers: false,
       },
       opacity: 1,
-      y: "-400px",
+      top: "-400px",
       duration: 1,
       stagger: 0.3,
     });
     gsap.to("#contact", {
       scrollTrigger: {
-        trigger: "#about",
-        start: "-100% 80%",
-        end: "200% 80%",
+        trigger: "#contact",
+        start: "top bottom",
+        end: "bottom bottom",
         scrub: true,
         toggleActions: "play none none none",
         markers: false,
       },
       opacity: 1,
-      y: "-400px",
+      bottom: "0",
+      textAlign: "top",
       duration: 1,
       stagger: 0.3,
     });
