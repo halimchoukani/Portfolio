@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 import { Svg1 } from "./SVG/Svg1";
 import { Svg2 } from "./SVG/Svg2";
 import { Svg3 } from "./SVG/Svg3";

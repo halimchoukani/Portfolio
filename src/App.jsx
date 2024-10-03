@@ -4,6 +4,7 @@ import Hero from "./Component/Hero";
 import { ReactLenis, useLenis } from 'lenis/react';
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import Projects from "./Component/Projects";
 
 function App() {
   const lenisRef = useRef();
@@ -26,6 +27,7 @@ function App() {
     <ReactLenis root ref={lenisRef} autoRaf={false}>
       <Navbar />
       <Hero />
+      <Projects/>
     </ReactLenis>
   );
 }
