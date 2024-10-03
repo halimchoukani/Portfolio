@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {},
     backgroundImage: {
-      'project1': "url('/assets/images/project1.png')a",
+      project1: "url('/assets/images/project1.png')",
     },
-    
+
     screens: {
       sm: "576px",
       // => @media (min-width: 576px) { ... }
