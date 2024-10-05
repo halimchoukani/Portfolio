@@ -77,14 +77,6 @@ function Projects() {
             />
             <Card
               cname="card-left" // Consistent class name
-              num="0"
-              img="/assets/images/project1.png"
-              title="Nexus Games"
-              link="https://github.com/halimchoukani/NexusGames"
-              desc="A marketplace for e-sports peripherals."
-            />
-            <Card
-              cname="card-left" // Consistent class name
               num="1"
               img="https://github.com/halimchoukani/PFE_Manager/raw/main/image_2024-10-02_155259849.png"
               title="PFE Manger"
