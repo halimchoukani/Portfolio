@@ -28,50 +28,36 @@ function App() {
     };
   }, []);
   useEffect(() => {
-    gsap.to("#project", {
+    gsap.to("#home", {
       scrollTrigger: {
-        trigger: "#project",
-        start: "-10% 80%",
-        end: "bottom 80%",
+        trigger: "#home",
+        start: "top top",
+        end: "bottom top",
         scrub: true,
         toggleActions: "play none none none",
         markers: false,
       },
       opacity: 1,
-      top: "-400px",
+      y: "100vh",
       duration: 1,
       stagger: 0.3,
     });
     gsap.to("#about", {
       scrollTrigger: {
-        trigger: "#project",
-        start: "40% 80%",
-        end: "150% 80%",
+        trigger: "#about",
+        start: "top 5%",
+        end: "200% top",
         scrub: true,
         toggleActions: "play none none none",
         markers: false,
       },
       opacity: 1,
-      top: "-400px",
-      duration: 1,
-      stagger: 0.3,
-    });
-    gsap.to("#contact", {
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top bottom",
-        end: "bottom bottom",
-        scrub: true,
-        toggleActions: "play none none none",
-        markers: false,
-      },
-      opacity: 1,
-      bottom: "0",
-      textAlign: "top",
+      y: "150vh",
       duration: 1,
       stagger: 0.3,
     });
   }, []);
+
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false}>
       <Navbar />

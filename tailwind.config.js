@@ -6,7 +6,12 @@ export default {
     backgroundImage: {
       project1: "url('/assets/images/project1.png')",
     },
-
+    backgroundSize: {
+      auto: "auto",
+      cover: "cover",
+      contain: "contain",
+      scoop: "200%",
+    },
     screens: {
       sm: "576px",
       // => @media (min-width: 576px) { ... }

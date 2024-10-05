@@ -37,7 +37,7 @@ function ScrollIcon() {
   }, []);
 
   return (
-    <div className="relative w-auto h-auto bg-black left-[100%]">
+    <div className="relative w-auto h-auto bg-[#161616] left-[100%]">
       {/* Wrapper around the text to ensure proper rotation */}
       <div
         className="fixed top-[90%] left-[80%] translate-x-[-50%] translate-y-[-50%] text-[24px] font-extrabold font-sans transition-all duration-500 text-stroke"

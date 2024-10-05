@@ -6,11 +6,11 @@ import { useEffect } from "react";
 
 function Projects() {
   useEffect(() => {
-    gsap.to(".card", {
+    gsap.to(".card-left", {
       scrollTrigger: {
-        trigger: ".card-container", // Use a container for triggering the animation
-        start: "-90% top", // Adjust start and end based on visibility
-        end: "90% 80%",
+        trigger: "#container-left", // Use a container for triggering the animation
+        start: "-10% 80%", // Adjust start and end based on visibility
+        end: "80% 80%",
         scrub: true,
         toggleActions: "play play reverse play",
         markers: false,
@@ -19,7 +19,22 @@ function Projects() {
       y: -150,
       duration: 1,
       stagger: 0.3,
-      ease: "power4.out",
+      ease: "slow(0.3, 0.4, false)",
+    });
+    gsap.to(".card-right", {
+      scrollTrigger: {
+        trigger: "#container-right", // Use a container for triggering the animation
+        start: "top 80%", // Adjust start and end based on visibility
+        end: "80% 80%",
+        scrub: true,
+        toggleActions: "play play reverse play",
+        markers: false,
+      },
+      opacity: 1,
+      y: -150,
+      duration: 1,
+      stagger: 0.3,
+      ease: "slow(0.3, 0.4, false)",
     });
     gsap.to(".text", {
       scrollTrigger: {
@@ -33,7 +48,6 @@ function Projects() {
       opacity: 1,
       y: -20,
       duration: 1,
-      ease: "power4.out",
     });
   }, []);
 
@@ -46,12 +60,15 @@ function Projects() {
             Take a look at some of my projects
           </p>
         </div>
-        <div className="card-container flex flex-row  w-full  justify-center gap-12">
+        <div className="card-container flex flex-row  w-full  justify-center items-start gap-12">
           {" "}
           {/* Added container */}
-          <div className="w-full flex flex-col justify-center p-20 gap-12">
+          <div
+            className="w-full flex flex-col justify-center p-20 gap-12"
+            id="container-left"
+          >
             <Card
-              className="card" // Consistent class name
+              cname="card-left" // Consistent class name
               num="0"
               img="/assets/images/project1.png"
               title="Nexus Games"
@@ -59,7 +76,15 @@ function Projects() {
               desc="A marketplace for e-sports peripherals."
             />
             <Card
-              className="card" // Consistent class name
+              cname="card-left" // Consistent class name
+              num="0"
+              img="/assets/images/project1.png"
+              title="Nexus Games"
+              link="https://github.com/halimchoukani/NexusGames"
+              desc="A marketplace for e-sports peripherals."
+            />
+            <Card
+              cname="card-left" // Consistent class name
               num="1"
               img="https://github.com/halimchoukani/PFE_Manager/raw/main/image_2024-10-02_155259849.png"
               title="PFE Manger"
@@ -67,9 +92,12 @@ function Projects() {
               desc="Web application that manages the entire student registration process for the PFE (Final Year Project) internship."
             />
           </div>
-          <div className="card-container w-full flex flex-col justify-center p-20 pt-52 gap-12">
+          <div
+            className="card-container w-full flex flex-col justify-center p-20 pt-52 gap-12"
+            id="container-right"
+          >
             <Card
-              className="card" // Consistent class name
+              cname="card-right" // Consistent class name
               num="0"
               img="/assets/images/apple.png"
               title="Apple 3D iPhone 15 Clone"
@@ -77,7 +105,7 @@ function Projects() {
               desc="3D Apple Website Clone."
             />
             <Card
-              className="card" // Consistent class name
+              cname="card-right" // Consistent class name
               num="1"
               img="https://github.com/halimchoukani/StarbucksHomeUIClone/raw/main/image_2024-10-02_165110636.png"
               link="https://github.com/halimchoukani/StarbucksHomeUIClone"
