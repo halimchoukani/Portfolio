@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg: #050810;
+  --color-surface: #0b1120;
+  --color-surface2: #101828;
+  --color-accent: #00f5c4;
+  --color-accent2: #0066ff;
+  --color-accent3: #7b2fff;
+  --color-text-main: #e8edf8;
+  --color-text-muted: #6b7a99;
+  --color-border-accent: rgba(0,245,196,0.12);
+
+  --font-sans: var(--font-syne);
+  --font-mono: var(--font-space-mono);
+
+  --shadow-glow: 0 0 40px rgba(0,245,196,0.18);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #050810;
+  --surface: #0b1120;
+  --surface2: #101828;
+  --accent: #00f5c4;
+  --accent2: #0066ff;
+  --accent3: #7b2fff;
+  --text: #e8edf8;
+  --text-muted: #6b7a99;
+  --border: rgba(0,245,196,0.12);
+  --glow: 0 0 40px rgba(0,245,196,0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
+  cursor: none;
 }
+
+/* NOISE OVERLAY */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* GRID BG */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(0,245,196,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,245,196,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+section { position: relative; z-index: 2; }
