@@ -4,8 +4,7 @@ import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { GoogleTagManager } from '@next/third-parties/google'
-
+import { GoogleTagManager } from "@next/third-parties/google";
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
@@ -19,7 +18,8 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Halim Choukani — Software Engineer",
-  description: "Portfolio of Halim Choukani, Software Engineer based in Tunisia.",
+  description:
+    "Portfolio of Halim Choukani, Software Engineer based in Tunisia.",
 };
 
 export default function RootLayout({
@@ -29,13 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${spaceMono.variable} antialiased font-sans bg-bg text-text-main`}>
+      <body
+        className={`${syne.variable} ${spaceMono.variable} antialiased font-sans bg-bg text-text-main`}
+      >
         <CustomCursor />
         <Navbar />
         {children}
         <Footer />
       </body>
-      <GoogleAnalytics gaId="G-VJ7WB9D6YH" />
+      <GoogleTagManager gtmId="G-VJ7WB9D6YH" />
     </html>
   );
 }
