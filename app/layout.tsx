@@ -21,6 +21,20 @@ export const metadata: Metadata = {
   title: "Halim Choukani — Software Engineer",
   description:
     "Portfolio of Halim Choukani, Software Engineer based in Tunisia.",
+  keywords: [
+    "Halim Choukani",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Web Developer",
+    "backend developer",
+    "Frontend Developer",
+    "jobs",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tunisia",
+    "Portfolio",
+  ],
 };
 
 export default function RootLayout({
