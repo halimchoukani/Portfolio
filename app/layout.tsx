@@ -4,7 +4,8 @@ import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
@@ -37,7 +38,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-      <GoogleTagManager gtmId="G-VJ7WB9D6YH" />
+      <GoogleAnalytics gaId="G-VJ7WB9D6YH" />
     </html>
   );
 }
