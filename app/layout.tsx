@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     "Tunisia",
     "Portfolio",
   ],
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION, // only needed for the meta tag method
+  },
 };
 
 export default function RootLayout({
