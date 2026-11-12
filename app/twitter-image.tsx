@@ -1,0 +1,11 @@
+import Image, {
+  size as ogSize,
+  contentType as ogContentType,
+  alt as ogAlt,
+} from "./opengraph-image";
+
+export const alt = ogAlt;
+export const size = ogSize;
+export const contentType = ogContentType;
+
+export default Image;

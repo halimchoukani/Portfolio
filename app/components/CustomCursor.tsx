@@ -11,7 +11,7 @@ export default function CustomCursor() {
     const ring = ringRef.current;
     if (!dot || !ring) return;
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       gsap.set([dot, ring], { xPercent: -50, yPercent: -50 });
 
       const onMouseMove = (e: MouseEvent) => {

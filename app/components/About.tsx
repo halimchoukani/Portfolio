@@ -9,7 +9,7 @@ export default function About() {
   const container = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       gsap.fromTo(".reveal-left", 
         { opacity: 0, x: -40 },
         { 
@@ -57,7 +57,7 @@ export default function About() {
           scalable microservices to real-time applications.
           <br /><br />
           I thrive in dynamic environments, write clean maintainable code, and pick up new 
-          technologies fast. Currently pursuing a Master's in Mobile Development while 
+          technologies fast. Currently pursuing a Master&apos;s in Mobile Development while 
           expanding my expertise in AI-augmented systems.
         </p>
       </div>

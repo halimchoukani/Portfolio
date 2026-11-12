@@ -6,7 +6,7 @@ export default function Hero() {
   const container = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.fromTo(
@@ -55,7 +55,9 @@ export default function Hero() {
       ref={container}
       className="min-h-screen flex flex-col justify-center px-8 md:px-[60px] pt-[120px] pb-[80px] overflow-hidden"
     >
-      <div className="hero-eyebrow font-mono text-[12px] tracking-[0.3em] uppercase text-accent mb-7"> // Software Engineer · Full-Stack Developer </div>
+      <div className="hero-eyebrow font-mono text-[12px] tracking-[0.3em] uppercase text-accent mb-7">
+        {"// Software Engineer · Full-Stack Developer"}
+      </div>
       <h1 className="hero-name text-[clamp(52px,10vw,120px)] font-[800] leading-[0.9] tracking-[-0.03em]">
         <span className="block bg-gradient-to-br from-white via-accent to-accent2 bg-clip-text text-transparent">
           Halim
@@ -84,8 +86,8 @@ export default function Hero() {
         </a>
       </div>
 
-      <div className="hero-deco absolute hidden lg:block right-[60px] top-1/2 -translate-y-1/2">
-        <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[clamp(240px,35vw,500px)] h-auto">
+      <div aria-hidden="true" className="hero-deco absolute hidden lg:block right-[60px] top-1/2 -translate-y-1/2">
+        <svg aria-hidden="true" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[clamp(240px,35vw,500px)] h-auto">
           <circle cx="210" cy="210" r="180" stroke="rgba(0,245,196,0.07)" strokeWidth="1" />
           <circle cx="210" cy="210" r="140" stroke="rgba(0,245,196,0.1)" strokeWidth="1" />
           <circle cx="210" cy="210" r="100" stroke="rgba(0,245,196,0.12)" strokeWidth="1" />

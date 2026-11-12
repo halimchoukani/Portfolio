@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav className="w-[100vw] fixed top-0 left-0 right-0 z-[100] flex flex-col backdrop-blur-[20px] bg-bg/70 border-b border-border-accent">
       <div className="w-full flex items-center justify-between py-4 px-6 md:py-5 md:px-16 relative z-[101]">
-        <a href="#hero" className="font-mono text-[13px] tracking-[0.15em] text-accent decoration-none z-[101]">
+        <a href="#hero" aria-label="Halim Choukani portfolio home" className="font-mono text-[13px] tracking-[0.15em] text-accent decoration-none z-[101]">
           Halim Choukani
         </a>
 
@@ -60,6 +60,7 @@ export default function Navbar() {
             href="https://drive.google.com/file/d/1s2JM6Ix7aLcVgMyZwkTy0xau9x-rbMby/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View Halim Choukani's resume"
             className="hidden md:inline-flex items-center justify-center py-2 px-4 rounded-sm border border-accent text-accent font-mono text-[11px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:bg-accent hover:text-[#050810] cursor-none"
             onClick={() => sendGTMEvent({ event: 'resume_download' })}
           >
@@ -99,6 +100,7 @@ export default function Navbar() {
               href="https://drive.google.com/file/d/1s2JM6Ix7aLcVgMyZwkTy0xau9x-rbMby/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View Halim Choukani's resume"
               onClick={() => setIsMobileMenuOpen(false)}
               className="inline-flex mt-2 items-center justify-center py-3 px-6 rounded-sm border border-accent text-accent font-mono text-[12px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:bg-accent hover:text-[#050810] cursor-none"
             >
