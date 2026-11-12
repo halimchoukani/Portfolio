@@ -5,6 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Clarity from "./components/Clarity";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Clarity />
       </body>
       <GoogleAnalytics gaId="G-VJ7WB9D6YH" />
       <GoogleTagManager gtmId="GTM-PRGLGTZ2" />
