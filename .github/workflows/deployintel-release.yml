@@ -1,0 +1,22 @@
+name: DeployIntel Release Tracker
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify-deployintel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify DeployIntel of new release
+        run: |
+          curl -s -X POST "http://localhost:8080/api/v1/releases" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NWQ0OWQ4My1mN2YxLTQyODMtYTA5Ny01YWY4NzdiZjMwMDUiLCJlbWFpbCI6ImhhbGltLmNob3VrYW5pQGdtYWlsLmNvbSIsInJvbGUiOiJERVZFTE9QRVIiLCJwcm9qZWN0SWQiOiI1YjlhYzEwMC02MjIzLTQwMGMtYTMxNi01MmUyZDYwOTlhMjEiLCJ0eXBlIjoiQ0lDRCIsImlhdCI6MTc5NDc1Njc4NiwiZXhwIjoxODI2MjkyNzg2fQ.N9E8qJsRItkubSdMcBo3BJS0Fy-0QfDwAP5XMhI-eAuVmT9S5wSwxnAcRa-Tb0dxbORqdI70IIvT0BPvCQaBtw" \
+            -H "Content-Type: application/json" \
+            -d '{
+                  "projectId": "5b9ac100-6223-400c-a316-52e2d6099a21",
+                  "versionNumber": "${{ github.ref_name }}",
+                  "commitSha": "${{ github.sha }}",
+                  "branch": "${{ github.ref_name }}",
+                  "tag": "${{ github.ref_name }}",
+                  "environment": "PRODUCTION"
+                }'
