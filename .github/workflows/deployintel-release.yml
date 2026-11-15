@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Notify DeployIntel of new release
         run: |
-          curl -s -X POST "${{ secrets.DEPLOYINTEL_API_URL }}/api/v1/releases" \
+          curl -s -X POST "${{ secrets.DEPLOYINTEL_URL }}/api/v1/releases" \
             -H "Authorization: Bearer ${{ secrets.DEPLOYINTEL_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{
