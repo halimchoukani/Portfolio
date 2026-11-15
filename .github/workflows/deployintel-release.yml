@@ -13,7 +13,7 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.DEPLOYINTEL_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{
-                  "projectId": "5b9ac100-6223-400c-a316-52e2d6099a21",
+                  "projectId": "c5d0acb9-9c64-4044-9f68-d85825504e47",
                   "versionNumber": "${{ github.ref_name }}",
                   "commitSha": "${{ github.sha }}",
                   "branch": "${{ github.ref_name }}",
