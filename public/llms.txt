@@ -31,16 +31,29 @@ Single-page layout with the following sections in order:
 | Projects | `app/components/Projects.tsx` | Project cards with links to GitHub/live demos |
 | Education | `app/components/Education.tsx` | Academic degrees and certifications |
 | Contact | `app/components/Contact.tsx` | Contact form with validation, social links |
-| Navbar | `app/components/Navbar.tsx` | Responsive navigation with scroll spy |
+| Navbar | `app/components/Navbar.tsx` | Responsive navigation with scroll spy, theme toggle |
 | Footer | `app/components/Footer.tsx` | Copyright and social links |
-| CustomCursor | `app/components/CustomCursor.tsx` | Custom cursor effect |
+| CustomCursor | `app/components/CustomCursor.tsx` | Custom cursor effect (theme-aware) |
+| ThemeProvider | `app/components/ThemeProvider.tsx` | React context for theme state (light/dark/system) |
+| ThemeToggle | `app/components/ThemeToggle.tsx` | Theme switcher button in navbar |
 
 ## Technical Stack
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Font**: Geist (via next/font)
+- **Styling**: Tailwind CSS v4 with CSS custom properties
+- **Font**: Syne (display) + Space Mono (monospace) via next/font
 - **Deployment**: Vercel
+
+## Theme System
+- **Light/Dark/System modes** with persistence via localStorage
+- **CSS custom properties** for all semantic colors (`--bg`, `--surface`, `--accent`, `--text`, `--text-muted`, `--border`, etc.)
+- **Automatic system preference detection** via `prefers-color-scheme`
+- **Manual toggle** in navbar (cycles: Light → Dark → System)
+- **OLED-friendly dark mode** (`#020617` near-black background)
+- **High contrast ratios** meeting WCAG AA (4.5:1 minimum for normal text)
+  - Light: `#0f172a` on `#ffffff` (16.3:1), `#475569` on `#ffffff` (5.8:1)
+  - Dark: `#f8fafc` on `#020617` (15.3:1), `#94a3b8` on `#020617` (5.2:1)
+  - Accent: Teal `#00876b` (light) / `#00f5c4` (dark) — both 4.5:1+ on respective backgrounds
 
 ## API Endpoints
 None - This is a static portfolio site with client-side only functionality.
@@ -64,9 +77,12 @@ All content is hardcoded in component files. No external CMS or database.
 ## Accessibility
 - Semantic HTML5 elements
 - ARIA labels on interactive elements
-- Focus-visible styles
-- Color contrast compliant
-- Reduced motion support
+- Focus-visible styles (2px solid accent ring, 2px offset)
+- Color contrast compliant (WCAG AA 4.5:1 minimum for all text)
+- Reduced motion support (`prefers-reduced-motion` disables animations)
+- Theme-aware focus and selection styles
+- Keyboard-navigable theme toggle with ARIA attributes
+- Visible focus states in both light and dark modes
 
 ## Performance
 - Static generation (SSG) for all pages

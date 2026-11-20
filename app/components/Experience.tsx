@@ -32,10 +32,10 @@ export default function Experience() {
         </div>
         <h2 className="text-[clamp(32px,4vw,52px)] font-[800] leading-[1.05] tracking-[-0.02em]">Work History</h2>
       </div>
-      
+
       <div className="exp-grid grid grid-cols-1 lg:grid-cols-2 gap-6 mt-16">
-        <article className="exp-card bg-surface border border-border-accent rounded-lg p-10 relative overflow-hidden transition-all duration-300 hover:border-accent/25 hover:-translate-y-1 hover:shadow-glow">
-          <span className="absolute top-7 right-7 font-mono text-[10px] py-1 px-2.5 rounded-sm bg-accent/10 text-accent tracking-[0.1em]">REMOTE</span>
+        <article className="exp-card bg-surface border border-border rounded-lg p-10 relative overflow-hidden transition-all duration-300 hover:border-accent/25 hover:-translate-y-1 hover:shadow-glow">
+          <span className="absolute top-7 right-7 font-mono text-[10px] py-1 px-2.5 rounded-sm bg-accent-muted text-accent tracking-[0.1em]">REMOTE</span>
           <div className="font-mono text-[11px] text-accent tracking-[0.1em] mb-3">Feb 2025 – Jun 2025</div>
           <h3 className="text-[22px] font-[800] mb-1">Turing Academy</h3>
           <div className="text-[14px] text-text-muted mb-6">End-of-Studies Internship · Full-Stack Engineer</div>
@@ -50,8 +50,8 @@ export default function Experience() {
           </ul>
         </article>
 
-        <article className="exp-card bg-surface border border-border-accent rounded-lg p-10 relative overflow-hidden transition-all duration-300 hover:border-accent/25 hover:-translate-y-1 hover:shadow-glow">
-          <span className="absolute top-7 right-7 font-mono text-[10px] py-1 px-2.5 rounded-sm bg-accent/10 text-accent tracking-[0.1em]">ON-SITE</span>
+        <article className="exp-card bg-surface border border-border rounded-lg p-10 relative overflow-hidden transition-all duration-300 hover:border-accent/25 hover:-translate-y-1 hover:shadow-glow">
+          <span className="absolute top-7 right-7 font-mono text-[10px] py-1 px-2.5 rounded-sm bg-accent-muted text-accent tracking-[0.1em]">ON-SITE</span>
           <div className="font-mono text-[11px] text-accent tracking-[0.1em] mb-3">Jan 2024 – Feb 2024</div>
           <h3 className="text-[22px] font-[800] mb-1">ZIMYS</h3>
           <div className="text-[14px] text-text-muted mb-6">Internship · Web Developer · Boumhal, Ben Arous</div>

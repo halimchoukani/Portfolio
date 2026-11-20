@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Clarity from "./components/Clarity";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -158,7 +159,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -166,13 +167,15 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${syne.variable} ${spaceMono.variable} antialiased font-sans bg-bg text-text-main`}
+        className={`${syne.variable} ${spaceMono.variable} antialiased font-sans bg-bg text-text`}
       >
-        <CustomCursor />
-        <Navbar />
-        {children}
-        <Footer />
-        <Clarity />
+        <ThemeProvider>
+          <CustomCursor />
+          <Navbar />
+          {children}
+          <Footer />
+          <Clarity />
+        </ThemeProvider>
       </body>
       <GoogleAnalytics gaId="G-VJ7WB9D6YH" />
       <GoogleTagManager gtmId="GTM-PRGLGTZ2" />

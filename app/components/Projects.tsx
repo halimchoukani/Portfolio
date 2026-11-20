@@ -40,33 +40,33 @@ export default function Projects() {
           </div>
           <h2 className="text-[clamp(32px,4vw,52px)] font-[800] leading-[1.05] tracking-[-0.02em]">Selected Work</h2>
         </div>
-        <a href="https://github.com/halimchoukani" target="_blank" rel="noopener noreferrer" aria-label="View Halim Choukani's projects on GitHub" className="inline-flex items-center gap-2.5 py-[14px] px-8 rounded-sm bg-transparent text-text-main font-mono text-[12px] font-normal tracking-[0.1em] uppercase border border-border-accent transition-all duration-200 hover:border-accent hover:text-accent hover:-translate-y-0.5 cursor-none whitespace-nowrap">
+        <a href="https://github.com/halimchoukani" target="_blank" rel="noopener noreferrer" aria-label="View Halim Choukani's projects on GitHub" className="inline-flex items-center gap-2.5 py-[14px] px-8 rounded-sm bg-transparent text-text font-mono text-[12px] font-normal tracking-[0.1em] uppercase border border-border transition-all duration-200 hover:border-accent hover:text-accent hover:-translate-y-0.5 cursor-pointer whitespace-nowrap">
           GitHub →
         </a>
       </div>
-      
-      <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 border border-border-accent rounded-lg overflow-hidden lg:rounded-br-lg lg:rounded-bl-none">
+
+      <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 border border-border rounded-lg overflow-hidden lg:rounded-br-lg lg:rounded-bl-none">
         {projects.map((proj, i) => (
-          <article key={i} className={`project-card bg-surface p-10 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:z-10 hover:shadow-glow cursor-none group ${i === 0 ? "lg:rounded-tl-lg" : ""} ${i === 2 ? "lg:rounded-tr-lg" : ""} ${i === 3 ? "lg:rounded-bl-lg" : ""}`}>
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent2/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <article key={i} className={`project-card bg-surface p-10 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:z-10 hover:shadow-glow cursor-pointer group ${i === 0 ? "lg:rounded-tl-lg" : ""} ${i === 2 ? "lg:rounded-tr-lg" : ""} ${i === 3 ? "lg:rounded-bl-lg" : ""}`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent-hover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <div aria-hidden="true" className="absolute top-8 right-8 text-[20px] text-text-muted transition-all duration-300 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1">↗</div>
             <div className="font-mono text-[11px] text-text-muted tracking-[0.2em] mb-5">{proj.num}</div>
             <h3 className="text-[22px] font-[800] mb-3 relative z-10">{proj.title}</h3>
             <p className="text-[14px] text-text-muted leading-[1.7] mb-6 relative z-10">{proj.desc}</p>
             <div className="flex flex-wrap gap-2 relative z-10">
               {proj.tech.map((tag, j) => (
-                <span key={j} className="font-mono text-[11px] py-1 px-3 border border-border-accent rounded-sm text-text-muted transition-colors duration-200 hover:text-accent hover:border-accent/40">{tag}</span>
+                <span key={j} className="font-mono text-[11px] py-1 px-3 border border-border rounded-sm text-text-muted transition-colors duration-200 hover:text-accent hover:border-accent/40">{tag}</span>
               ))}
             </div>
           </article>
         ))}
 
-        <article className="project-card bg-gradient-to-br from-accent/5 to-accent2/5 p-10 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:z-10 hover:shadow-glow cursor-none group lg:col-span-2 lg:rounded-br-lg">
+        <article className="project-card bg-gradient-to-br from-accent/5 to-accent-hover/5 p-10 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:z-10 hover:shadow-glow cursor-pointer group lg:col-span-2 lg:rounded-br-lg">
           <div aria-hidden="true" className="absolute top-8 right-8 text-[20px] text-text-muted transition-all duration-300 group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1">↗</div>
           <div className="font-mono text-[11px] text-text-muted tracking-[0.2em] mb-5">More on GitHub</div>
           <h3 className="text-[22px] font-[800] mb-3 relative z-10">Open Source & Personal Projects</h3>
           <p className="text-[14px] text-text-muted leading-[1.7] mb-6 relative z-10">Explore additional projects, experiments and open-source contributions on GitHub — ranging from utility tools to full-stack applications.</p>
-          <a href="https://github.com/halimchoukani" target="_blank" rel="noopener noreferrer" aria-label="Visit Halim Choukani's GitHub profile" className="relative z-10 inline-flex items-center gap-2.5 py-3 px-6 rounded-sm bg-accent text-[#050810] font-mono text-[12px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:-translate-y-0.5 hover:shadow-glow cursor-none">
+          <a href="https://github.com/halimchoukani" target="_blank" rel="noopener noreferrer" aria-label="Visit Halim Choukani's GitHub profile" className="relative z-10 inline-flex items-center gap-2.5 py-3 px-6 rounded-sm bg-accent text-text-inverse font-mono text-[12px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:-translate-y-0.5 hover:shadow-glow cursor-pointer">
             github.com/halimchoukani →
           </a>
         </article>

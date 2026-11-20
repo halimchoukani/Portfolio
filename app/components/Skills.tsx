@@ -44,15 +44,15 @@ export default function Skills() {
       </div>
       <div className="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((skill, i) => (
-          <div key={i} className="skill-card bg-surface border border-border-accent rounded-lg p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-glow group">
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent to-accent2 scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
-            <div aria-hidden="true" className="w-11 h-11 rounded-lg bg-accent/10 flex items-center justify-center mb-5 text-[22px]">
+          <div key={i} className="skill-card bg-surface border border-border rounded-lg p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-glow group">
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent to-accent-hover scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
+            <div aria-hidden="true" className="w-11 h-11 rounded-lg bg-accent-muted flex items-center justify-center mb-5 text-[22px]">
               {skill.icon}
             </div>
             <h3 className="text-[16px] font-[700] mb-4 tracking-[0.02em]">{skill.title}</h3>
             <div className="flex flex-wrap gap-2">
               {skill.tags.map((tag, j) => (
-                <span key={j} className="font-mono text-[11px] py-1 px-3 border border-border-accent rounded-sm text-text-muted transition-colors duration-200 hover:text-accent hover:border-accent/40">
+                <span key={j} className="font-mono text-[11px] py-1 px-3 border border-border rounded-sm text-text-muted transition-colors duration-200 hover:text-accent hover:border-accent/40">
                   {tag}
                 </span>
               ))}

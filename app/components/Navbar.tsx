@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { sendGTMEvent } from '@next/third-parties/google'
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("");
@@ -56,12 +57,13 @@ export default function Navbar() {
             <div className="w-[7px] h-[7px] rounded-full bg-accent animate-pulse shadow-glow" />
             Available for work
           </div>
+          <ThemeToggle />
           <a
             href="https://drive.google.com/file/d/1s2JM6Ix7aLcVgMyZwkTy0xau9x-rbMby/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Halim Choukani's resume"
-            className="hidden md:inline-flex items-center justify-center py-2 px-4 rounded-sm border border-accent text-accent font-mono text-[11px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:bg-accent hover:text-[#050810] cursor-none"
+            className="hidden md:inline-flex items-center justify-center py-2 px-4 rounded-sm border border-accent text-accent font-mono text-[11px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:bg-accent hover:text-text-inverse cursor-pointer"
             onClick={() => sendGTMEvent({ event: 'resume_download' })}
           >
             Resume
@@ -70,7 +72,7 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             aria-label="Toggle menu"
-            className="md:hidden text-accent transition-transform duration-200 hover:scale-110 cursor-none p-2 -mr-2 relative z-[101]"
+            className="md:hidden text-accent transition-transform duration-200 hover:scale-110 cursor-pointer p-2 -mr-2 relative z-[101]"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -79,7 +81,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 w-full bg-[#0b1120]/95 backdrop-blur-[20px] transition-all duration-300 ease-in-out border-b border-border-accent overflow-hidden z-[100] ${isMobileMenuOpen ? "max-h-[400px] opacity-100 py-6 visible" : "max-h-0 opacity-0 py-0 border-transparent invisible"
+        className={`md:hidden absolute top-full left-0 right-0 w-full bg-surface/95 backdrop-blur-[20px] transition-all duration-300 ease-in-out border-b border-border overflow-hidden z-[100] ${isMobileMenuOpen ? "max-h-[400px] opacity-100 py-6 visible" : "max-h-0 opacity-0 py-0 border-transparent invisible"
           }`}
       >
         <ul className="flex flex-col items-center gap-6 list-none">
@@ -96,13 +98,16 @@ export default function Navbar() {
             </li>
           ))}
           <li>
+            <ThemeToggle />
+          </li>
+          <li>
             <a
               href="https://drive.google.com/file/d/1s2JM6Ix7aLcVgMyZwkTy0xau9x-rbMby/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View Halim Choukani's resume"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="inline-flex mt-2 items-center justify-center py-3 px-6 rounded-sm border border-accent text-accent font-mono text-[12px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:bg-accent hover:text-[#050810] cursor-none"
+              className="inline-flex mt-2 items-center justify-center py-3 px-6 rounded-sm border border-accent text-accent font-mono text-[12px] font-bold tracking-[0.1em] uppercase transition-all duration-200 hover:bg-accent hover:text-text-inverse cursor-pointer"
             >
               Resume
             </a>

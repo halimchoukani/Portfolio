@@ -52,31 +52,31 @@ export default function About() {
           Crafting Digital<br />Experiences
         </h2>
         <p className="text-text-muted leading-[1.8] text-[16px]">
-          Information technology graduate with hands-on experience in full-stack web development. 
-          I specialize in building robust backend APIs and modern, reactive frontends — from 
+          Information technology graduate with hands-on experience in full-stack web development.
+          I specialize in building robust backend APIs and modern, reactive frontends — from
           scalable microservices to real-time applications.
           <br /><br />
-          I thrive in dynamic environments, write clean maintainable code, and pick up new 
-          technologies fast. Currently pursuing a Master&apos;s in Mobile Development while 
+          I thrive in dynamic environments, write clean maintainable code, and pick up new
+          technologies fast. Currently pursuing a Master&apos;s in Mobile Development while
           expanding my expertise in AI-augmented systems.
         </p>
       </div>
       <div className="reveal-right">
-        <div className="grid grid-cols-2 gap-0.5 mt-8 lg:mt-12 bg-border-accent bg-clip-border rounded-lg overflow-hidden border border-border-accent">
+        <div className="grid grid-cols-2 gap-0.5 mt-8 lg:mt-12 bg-border bg-clip-border rounded-lg overflow-hidden border border-border">
           <div className="p-7 bg-surface">
-            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent2 bg-clip-text text-transparent leading-none">3+</div>
+            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent-hover bg-clip-text text-transparent leading-none">3+</div>
             <div className="text-[13px] text-text-muted mt-1.5">Years building</div>
           </div>
           <div className="p-7 bg-surface">
-            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent2 bg-clip-text text-transparent leading-none">5+</div>
+            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent-hover bg-clip-text text-transparent leading-none">5+</div>
             <div className="text-[13px] text-text-muted mt-1.5">Projects shipped</div>
           </div>
           <div className="p-7 bg-surface">
-            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent2 bg-clip-text text-transparent leading-none">10+</div>
+            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent-hover bg-clip-text text-transparent leading-none">10+</div>
             <div className="text-[13px] text-text-muted mt-1.5">Technologies</div>
           </div>
           <div className="p-7 bg-surface">
-            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent2 bg-clip-text text-transparent leading-none">∞</div>
+            <div className="text-[40px] font-[800] bg-gradient-to-br from-accent to-accent-hover bg-clip-text text-transparent leading-none">∞</div>
             <div className="text-[13px] text-text-muted mt-1.5">Coffee consumed</div>
           </div>
         </div>

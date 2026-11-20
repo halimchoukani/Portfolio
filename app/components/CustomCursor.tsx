@@ -52,10 +52,12 @@ export default function CustomCursor() {
       <div
         ref={dotRef}
         className="fixed top-0 left-0 w-2 h-2 bg-accent rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        style={{ backgroundColor: 'var(--accent)' }}
       />
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-9 h-9 border-[1.5px] border-accent rounded-full pointer-events-none z-[9999] opacity-60 mix-blend-difference"
+        className="fixed top-0 left-0 w-9 h-9 border-[1.5px] rounded-full pointer-events-none z-[9999] opacity-60 mix-blend-difference"
+        style={{ borderColor: 'var(--accent)' }}
       />
     </>
   );
