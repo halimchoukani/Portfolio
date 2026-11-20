@@ -1,0 +1,86 @@
+# Portfolio Website - Halim Choukani
+
+This is a personal portfolio website built with Next.js 15, React 19, and TypeScript. The site showcases professional experience, projects, skills, education, and contact information.
+
+## Site Structure
+
+### Main Page (`/`)
+Single-page layout with the following sections in order:
+
+1. **Hero** - Introduction with name, title, and call-to-action
+2. **About** - Professional summary and background
+3. **Skills** - Technical skills organized by category
+4. **Experience** - Work history with roles, companies, and achievements
+5. **Projects** - Featured projects with descriptions and tech stacks
+6. **Education** - Academic background
+7. **Contact** - Contact form and social links
+
+### Navigation
+- Fixed navbar with smooth scroll to sections
+- Mobile-responsive hamburger menu
+- Sections: Home, About, Skills, Experience, Projects, Education, Contact
+
+## Key Components
+
+| Component | Path | Description |
+|-----------|------|-------------|
+| Hero | `app/components/Hero.tsx` | Landing section with animated text, CTA buttons |
+| About | `app/components/About.tsx` | Professional bio and summary |
+| Skills | `app/components/Skills.tsx` | Categorized skill tags (frontend, backend, tools, etc.) |
+| Experience | `app/components/Experience.tsx` | Timeline of work experience |
+| Projects | `app/components/Projects.tsx` | Project cards with links to GitHub/live demos |
+| Education | `app/components/Education.tsx` | Academic degrees and certifications |
+| Contact | `app/components/Contact.tsx` | Contact form with validation, social links |
+| Navbar | `app/components/Navbar.tsx` | Responsive navigation with scroll spy |
+| Footer | `app/components/Footer.tsx` | Copyright and social links |
+| CustomCursor | `app/components/CustomCursor.tsx` | Custom cursor effect |
+
+## Technical Stack
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Font**: Geist (via next/font)
+- **Deployment**: Vercel
+
+## API Endpoints
+None - This is a static portfolio site with client-side only functionality.
+
+## Data Sources
+All content is hardcoded in component files. No external CMS or database.
+
+## Contact Information
+- Email: Available in Contact component
+- GitHub: Linked in Footer and Contact
+- LinkedIn: Linked in Footer and Contact
+- Twitter/X: Linked in Footer and Contact
+
+## SEO & Metadata
+- Open Graph tags in `app/opengraph-image.tsx`
+- Twitter cards in `app/twitter-image.tsx`
+- Sitemap generated via `app/sitemap.ts`
+- Robots.txt via `app/robots.ts`
+- Web app manifest via `app/manifest.ts`
+
+## Accessibility
+- Semantic HTML5 elements
+- ARIA labels on interactive elements
+- Focus-visible styles
+- Color contrast compliant
+- Reduced motion support
+
+## Performance
+- Static generation (SSG) for all pages
+- Optimized images via Next.js Image component
+- Font optimization via next/font
+- Code splitting by route/component
+
+## Development
+```bash
+npm run dev     # Start development server
+npm run build   # Production build
+npm run start   # Start production server
+npm run lint    # Run ESLint
+```
+
+## License
+MIT License - See repository for details.
